@@ -1,0 +1,47 @@
+class marksheet:
+    def init(ali, math, phy, chem, aic, dld, dsa):
+        ali.math=math
+        ali.phy=phy
+        ali.chem=chem
+        ali.aic=aic
+        ali.dld=dld
+        ali.dsa=dsa
+    def per(ali):
+        a=int(ali.math)
+        b=int(ali.phy)
+        c=int(ali.chem)
+        d=int(ali.aic)
+        e=int(ali.dld)
+        f=int(ali.dsa)
+        p=((a+b+c+d+e+f)/600)*100
+        print(p)
+        return(p)
+    def grade(ali):
+        a=int(ali.math)
+        b=int(ali.phy)
+        c=int(ali.chem)
+        d=int(ali.aic)
+        e=int(ali.dld)
+        f=int(ali.dsa)
+        p=((a+b+c+d+e+f)/600)*100
+        if p>=80 and p<100:
+            print('Grade:A+')
+        elif p>=70 and p<80:
+            print('Grade:A' )
+        elif p>=60 and p<70:
+            print('Grade:B' )
+        elif p>=50 and p<60:
+            print('Grade:C' )
+        elif p>=40 and p<50:
+            print('Grade:D' )
+        else:
+            print('chal mera putr chuti kr')
+a=int(input('Enter math marks: ')) 
+b=int(input('Enter physics marks: ')) 
+c=int(input('Enter chemistry marks: ')) 
+d=int(input('Enter AIC marks: ')) 
+e=int(input('Enter DLD marks: ')) 
+f=int(input('Enter DSA marks: ')) 
+s = marksheet(a,b,c,d,e,f)
+s.grade()
+s.per()
